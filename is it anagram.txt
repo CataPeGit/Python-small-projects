@@ -1,0 +1,19 @@
+def isanagram(x,y):
+    x = x.replace(" " , "")
+    x = x.lower()
+    y = y.replace(" " , "")
+    y = y.lower()
+    list1 = list(x)
+    list1.sort()
+    list2 = list(y)
+    list2.sort()
+    if list1 == list2:
+        print("it is a anagram")
+    else:
+        print("it is not an anagram")
+
+
+x=str(input("text1: "))
+y=str(input("text2: "))
+
+isanagram(x,y)

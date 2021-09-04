@@ -1,0 +1,60 @@
+def isYearLeap(year):
+    if year%4!=0:
+        return False
+    elif year%100!=0:
+        return True
+    elif year%400!=0:
+        return False
+    else:
+        return True
+
+
+
+def daysInMonth(year, month):
+    
+    if isYearLeap(year)==True and month==2:
+            return 29
+    if month==2:
+        return 28
+    elif month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12:
+        return 31
+    else:
+        return 30
+        
+"""
+testYears = [1900, 2000, 2016, 1987]
+testMonths = [2, 2, 1, 11]
+testResults = [28, 29, 31, 30]
+
+for i in range(len(testYears)):
+	yr = testYears[i]
+	mo = testMonths[i]
+	print(yr, mo, "->", end="")
+	result = daysInMonth(yr, mo)
+	if result == testResults[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+"""
+
+
+def dayOfYear(year, month, day):
+    if isYearLeap(year)==True and month==2 and day==29:
+        return 60
+    x=0
+    for i in range(month-1):
+        if i==2:
+            x+=28
+        elif i==4 or i==6 or i==9 or i==11:
+            x+=30
+        else:
+            x+=31
+    for i in range (day):
+        x+=1
+    return x
+
+print(dayOfYear(2000, 5, 27))
+
+
+    

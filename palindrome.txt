@@ -1,0 +1,16 @@
+def ispal(x):
+    x = x.replace(" " , "")
+    x = x.lower()
+    y = ''
+    for char in reversed(x):
+        y += char
+    if y==x:
+        print("is pali")
+    else:
+        print("nah brah")
+
+
+
+x=str(input("put ya boy that text: "))
+ispal(x)
+

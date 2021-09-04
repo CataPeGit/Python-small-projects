@@ -1,0 +1,80 @@
+# Caesar cipher
+text = input("Enter your message: ")
+cipher = ''
+for char in text:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) + 1
+    if code > ord('Z'):
+        code = ord('A')
+    cipher += chr(code)
+
+print(cipher)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Caesar cipher
+text = str(input("Enter your message: "))
+
+criptnumber = int(input("how much your ass want do go up by ?"))
+try:
+    assert criptnumber<=25
+    assert criptnumber>0
+except:
+    print("max cript 25!")
+cipher = ''
+for char in text:
+    if char.isdigit() == True or char == " ":
+        cipher += char
+        pass
+    else:
+        code = ord(char) + criptnumber
+        if code > ord('z'):
+            code = ord('a')
+        cipher += chr(code)
+
+
+print(cipher)
+
+
+
+"""
+        if code > ord('z'):
+            a=ord('z')
+            b=ord(char)
+            bigcript = a - b
+            thiscript=criptnumber-bigcript
+            code = str(thisscript)
+        cipher += chr(code)
+
+
+
+
+        code = ord(char) + criptnumber
+        if code > ord('z'):
+            code = ord('a')
+        cipher += chr(code)
+
+"""

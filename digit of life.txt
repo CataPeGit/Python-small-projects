@@ -1,0 +1,21 @@
+def digitoflife(x):
+    y=0
+    z=0
+    i=0
+    for num in str(x):
+        y = y + int(num)
+    if y > 10:
+        for num in str(y):
+            z = z + int(num)
+        if z > 10:
+            for num in str(z):
+                i = i + int(num)
+            print(i)
+        else:
+            print(z)
+    else:
+        print(y)
+    
+x=int(input("Birthday yyyymmdd :"))
+digitoflife(x)
+
